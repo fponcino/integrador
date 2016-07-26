@@ -45,8 +45,15 @@ class UserController extends Controller
     	return back();
     }
 
-    public function showSearchSeller()
+    public function showSearchPeople(Request $request)
     {
-        return view('searchSeller');
+        return view('searchPeople');
+    }
+
+    public function showPeople(Request $request)
+    {
+        $parameter = $request->search;
+        $people = (User::where('name', 'LIKE', "%$parameter%")->get());
+        return view('searchPeople', ['people' => $people]);
     }
 }

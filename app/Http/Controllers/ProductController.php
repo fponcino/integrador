@@ -27,7 +27,7 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|max:255',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|min:1',
             'brand' => 'required',
             'category' => 'required',
             'description' => 'required',
@@ -57,4 +57,18 @@ class ProductController extends Controller
     {
         return view('buy');
     }
+
+    public function showProducts()
+    {
+        return view('products');
+    }
+
+    public function searchProducts(Request $request)
+    {
+       $parameter = $request->search; 
+       $products = (Product::where('title', 'LIKE', "%$parameter%")->get());
+       return view('buy', ['products' => $products]);
+    }
+
+
 }

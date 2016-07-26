@@ -29,3 +29,13 @@
 </div>
 
 @endsection
+
+@section('products')
+	@if(isset($products))
+		<ul>
+		@foreach($products as $product)
+			<li>{{$product->title}}</li>
+		@endforeach
+		</ul>
+	@endif
+@endsection

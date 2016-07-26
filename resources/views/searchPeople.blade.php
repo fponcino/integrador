@@ -7,9 +7,9 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Buscar Vendedores</div>
+                <div class="panel-heading">Buscar Personas</div>
                 <div class="panel-body">
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/buscarVendedores') }}">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/buscarPersonas') }}">
     					{{ csrf_field() }}
 
 				 		<div class="col-md-6">
@@ -28,4 +28,14 @@
 	</div>
 </div>
 
+@endsection
+
+@section('people')
+	@if (isset($people))
+		<ul>
+			@foreach($people as $pe)
+				<li>{{$pe->name}}</li>
+			@endforeach
+		</ul>
+	@endif
 @endsection

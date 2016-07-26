@@ -40,9 +40,14 @@
 
                         <div class="form-group{{ $errors->has('brand') ? ' has-error' : '' }}">
                             <label for="brand" class="col-md-4 control-label">Brand</label>
-
                             <div class="col-md-6">
-                                <input id="brand" type="text" class="form-control" name="brand" value="{{ old('brand') }}">
+                                <select name= "brand" class="form-control">
+                                    <option class="form-control" value=""></option>
+                                    <option class="form-control" value="Nike">Nike</option>
+                                    <option class="form-control" value="Adidas">Adidas</option>
+                                    <option class="form-control" value="UnderArmour">UnderArmour</option>
+                                    <option class="form-control" value="Reebook">Reebook</option>
+                                </select>
 
                                 @if ($errors->has('brand'))
                                     <span class="help-block">
@@ -56,7 +61,12 @@
                             <label for="category" class="col-md-4 control-label">Category</label>
 
                             <div class="col-md-6">
-                                <input id="category" type="category" class="form-control" name="category" value="{{ old('category') }}">
+                                <select name= "category" class="form-control">
+                                    <option class="form-control" value=""></option>
+                                    <option class="form-control" value="Hombre">Hombre</option>
+                                    <option class="form-control" value="Mujer">Mujer</option>
+                                    <option class="form-control" value="Nino">Niño</option>
+                                </select>
 
                                 @if ($errors->has('category'))
                                     <span class="help-block">

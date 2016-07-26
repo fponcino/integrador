@@ -50,8 +50,8 @@
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ url('/comprar') }}">Comprar</a></li>
                     <li><a href="{{ url('/vender') }}">Vender</a></li>
-                    <li><a href="{{ url('/buscarVendedores') }}">Buscar Vendedores</a></li>
-                    <li><a href="{{ url('/preguntasFrecuentes') }}">Faq</a></li>
+                    <li><a href="{{ url('/buscarPersonas') }}">Buscar personas</a></li>
+                    <li><a href="{{ url('/preguntasFrecuentes') }}"><span class= "glyphicon glyphicon-question-sign"></span></a></li>
 
                 </ul>
 
@@ -79,6 +79,10 @@
     </nav>
 
     @yield('content')
+    
+    @yield('people')
+
+    @yield('products')
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>

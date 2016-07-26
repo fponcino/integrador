@@ -13,15 +13,17 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('name');
             $table->string('surname');
             $table->string('phoneNumber');
             $table->string('email')->unique();
             $table->string('address');
-            $table->char('sex'); //Esta registrada en la BD como date
+            $table->char('sex');
             $table->date('date');
             $table->string('password');
+            $table->integer('follower_id')->unsigned();
+            $table->integer('product_id')->unsigned();
             $table->rememberToken();
             $table->timestamps();
         });
