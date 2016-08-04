@@ -1,0 +1,27 @@
+article{
+  color: black;
+}
+.pregYresp{
+  font-weight: lighter;
+  color: #084B8A;
+  background-color: white;
+}
+p {
+  color: #274068;
+  font-size: 12px;
+  background-color: #F8E9B9;
+  width: 90%;
+  border-radius: 12px;
+  padding: 5px;
+  padding-left: 20px;
+  margin-top: 2px;
+  font-family: sans-serif;
+  height: 40px;
+}
+article a{
+  color: red;
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  line-height: 30px;
+}

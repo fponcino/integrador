@@ -1,0 +1,33 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans regular", Helvetica, Arial, sans-serif;
+}
+
+.text{
+font-size: 16px;
+line-height: 1.62857143;
+color: #666666;
+}
+
+.main{
+
+}
+ .container{
+   margin: auto;
+ }
+
+
+
+.mainImage{
+  width: 60%;
+  height: auto;
+}
+
+header{
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+.row{
+  margin-bottom: 30px;
+}

@@ -9,7 +9,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Buscar Productos</div>
                 <div class="panel-body">
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/buscarProductos') }}">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/vistaProducto') }}">
     					{{ csrf_field() }}
 
 				 		<div class="col-md-6">
@@ -28,15 +28,4 @@
 	</div>
 </div>
 
-@endsection
-
-
-@section('products')
-	@if(isset($products))
-		<ul>
-		@foreach($products as $product)
-			<li>{{$product->title}}</li>
-		@endforeach
-		</ul>
-	@endif
 @endsection

@@ -1,0 +1,506 @@
+/*color: #e8e8e8*/
+body{
+  width: 100%!important;
+  font-family: 'Economica', sans-serif, arial;
+  font-size: 16px;
+  font-weight: 300;
+/*  background-image:url(http://s3-sa-east-1.amazonaws.com/store-templates/templates/059/863/twig/static/images/body-bg1.jpg);*/
+  background-image: url(../img/fondo2.png);
+  background-repeat: repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+
+.supNav{
+  padding-top: 5px;
+  margin-bottom: -15px;
+  overflow: hidden;
+  font-family: 'Economica', sans-serif;
+  letter-spacing: 2px;
+  padding-right: -10px;
+  border-radius: 0;
+  background-color: #222222;
+  index:600;
+  height: 100px;
+}
+
+.rightNav {
+  margin-right:100px ;
+  float: right;
+  margin-bottom: 15px;
+  padding-top: 5px;
+
+
+}
+.rightNav ul{
+  list-style-type: none;
+}
+.rightNav li{
+  display: inline;
+  index:1000;
+}
+.userDrop li{
+  display: block;
+  font-size: 15px;
+}
+.userDrop{
+  margin-top: 15px;
+  index:30;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+        .lineaVertical{
+          border-left: solid white 1px;
+          height: 15px;
+          margin-top:3px;
+          margin-left: 15px;
+          padding: 0px;
+
+          padding-right: 0px;
+          margin-right: 15px;
+        }
+        .divider-vertical{
+          margin-right: 15px;
+        }
+        .misCompras{
+          margin-top: -45px;
+          background-color: red;
+          border: solid red 1px;
+          border-radius: 0;
+          margin-left: 300px;
+          padding-right: 20px;
+          margin-right: -100px;
+          font-family: 'Economica', sans-serif;
+          letter-spacing: 2px;
+          font-size: 16px;
+          font-weight: 500;
+          float: right;
+          position: fixed;
+
+        }
+.infNavBar{
+    margin-top: -55px;
+    border: none;
+    border-radius: 0;
+    font-family:  sans-serif, arial;
+    margin-bottom: 5px;
+}
+.infNav {
+  border: none;
+  border-radius: 0;
+  font-family:  sans-serif, arial;
+
+}
+.infNavBar ul{
+  padding-left: 150px
+}
+  .logo{
+    width: 170px;
+    height: auto;
+    margin-top:-56px;
+    margin-right: 20px;
+    margin-bottom:-20px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin-left: 0;
+  }
+  .logo img{
+    height: auto;;
+    width: 180px;
+  }
+
+
+.iconosSocial {
+  position: fixed;
+  top: 50%;
+  right: 4px;
+}
+
+.slider{
+  border: solid 9px white;
+  -moz-box-shadow: 0px 1px 8px #adadad;
+  -webkit-box-shadow: 0px 1px 8px #adadad;
+  box-shadow: 0px 1px 8px #adadad;
+}
+
+.bannerMarcas{
+  -moz-box-shadow: 0px 1px 8px #adadad;
+  -webkit-box-shadow: 0px 1px 8px #adadad;
+  box-shadow: 0px 1px 8px #adadad;
+  background-color: white;
+
+}
+.bannerMarcas a img{
+  width: 70px;
+  height: auto;
+  opacity: 0.9;
+  margin-left: 7px;
+  margin-right: 7px;
+
+}
+
+.planesTarjetas{
+  background-color: white;
+  -moz-box-shadow: 0px 1px 8px #adadad;
+  -webkit-box-shadow: 0px 1px 8px #adadad;
+  box-shadow: 0px 1px 8px #adadad;
+  display: block;
+}
+
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.hovereffect .overlay {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+	top: auto;
+	bottom: 0;
+	padding: 0.3em;
+	height: 2.5em;
+	background: #303030;
+  opacity: 0.9;
+	color: white;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+  font-family: 'Economica', sans-serif;
+  font-size: 1.5em;
+}
+.overlay a{
+  color: white;
+
+}
+.hovereffect img {
+    display: block;
+    position: relative;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+.hovereffect:hover img {
+-webkit-transform: translate3d(0,-10%,0);
+	transform: translate3d(0,-10%,0);
+}
+
+
+.hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+	color: white;
+	border: 1px solid #fff;
+	margin: 50px 0 0 0;
+	background-color: transparent;
+}
+.hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+
+.hovereffect p.icon-links a {
+	float: right;
+	color: white;
+	font-size: 1.4em;
+}
+
+.hovereffect:hover p.icon-links a:hover,
+.hovereffect:hover p.icon-links a:focus {
+	color: white;
+}
+
+.hovereffect h2,
+.hovereffect p.icon-links a {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+
+.hovereffect p.icon-links a span:before {
+	display: inline-block;
+	padding: 8px 10px;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.hovereffect:hover .overlay,
+.hovereffect:hover h2,
+.hovereffect:hover p.icon-links a {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.hovereffect:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(2) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.hovereffect:hover p.icon-links a:first-child {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.clearout {
+height:20px;
+clear:both;
+}
+
+
+
+/*FAQ*/
+#mainFaq{
+  background-color: white;
+  padding: 10px;
+}
+.main h1{
+  font-family:'Economica', sans-serif;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+.pregYresp{
+  font-family: 'Economica', sans-serif;
+  color: black;
+  font-size: 1.1em;
+}
+
+.mostrar{
+  font-weight: bold;
+  font-family: 'Economica', sans-serif;
+  color: blue;
+}
+/*p*/ {
+  color: black;
+  width: 90%;
+  border-radius: 12px;
+  padding: 5px;
+  padding-left: 20px;
+  margin-top: 2px;
+  font-family: 'Economica', sans-serif;
+  height: 40px;
+}
+article a{
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: 'Economica', sans-serif;
+  line-height: 30px;
+}
+
+/*FOOTER*/
+.footer{
+  font-family: 'Economica', sans-serif;
+  color: white;
+
+
+}
+.footer a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Economica', sans-serif;
+}
+
+
+
+
+/*LOGIN*/
+
+
+
+
+
+
+
+
+/*REGISTER*/
+
+.panelBody{
+  background-color: #222222;
+  opacity: 0.9;
+  color: #d8d6d6;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.panelBody label{
+  padding-top: 12px;
+}
+.panelHeader{
+  background-color: #222222!important;
+  color: white!important;
+  border: none!important;
+  font-family: sans-serif;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.registerButton{
+  background-color: #183a65;
+  border: none;
+  padding-left: 1.7em;
+  padding-right: 1.7em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+.otherRegistration {
+ font-size: 1.3em;
+}
+.lineLeft{
+  float: left;
+  border-top: solid white 1px;
+  width: 30%;
+  margin-top: 8px;
+}
+.lineRight{
+  float: right;
+    border-top: solid white 1px;
+    width: 30%;
+    margin-top: 8px;
+}
+
+
+/*CREAR PRODUCTO*/
+.productLabel{
+  font-size: 16px;
+  padding-left: 30px;
+}
+
+
+
+
+/*TABLA TALLES*/
+table{
+margin: 0;
+padding: 0;
+border: 0;
+border-collapse: collapse;
+border-spacing: 0;
+text-align: center;
+width: 100%;
+font-family:'Economica', sans-serif;
+}
+.tableTitle{
+  background-color: rgb(53, 53, 53);
+  color: white;
+  font-size: 1.1em;
+  font-family:'Economica', sans-serif;
+  line-height: 1.4em;
+}
+.tablaTalles tr{
+  display: table-row;
+  border: 1px solid #ccc;
+
+}
+.tablaTalles td{
+  text-align: center;
+  color: #666;
+  line-height: 1.4em;
+  font-family:'Economica', sans-serif;
+  width: 25%;
+  margin: 0 auto;
+}
+
+
+
+/*OFERTAS*/
+.ahoraDoce{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+}
+.ahoraDoce img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.ofertasVarias{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+
+}
+.ofertasVarias img{
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+
+
+
+
+@media screen and (max-width: 825px) {
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-right: -17px!important;
+  padding-right: 17px!important;
+}
+
+.supNav{
+  width: 100%;
+}
+.rightNav ul{
+  width: 100%!important;
+}
+.rightNav ul li{
+  width: 100%;
+}
+.rightNav {
+  width: 100%;
+}
+  .iconosSocial{
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 25%;
+    right: 4px;
+  }
+  .clearout {
+  height:20px;
+  clear:both;
+  }
+
+
+
+@media screen and (max-width: 500px){
+  body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-right: -17px!important;
+    padding-right: 17px!important;
+  }
+}
