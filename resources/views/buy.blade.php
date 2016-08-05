@@ -30,7 +30,7 @@
 
 @endsection
 
-@section('products')
+{{-- <!-- @section('products')
 	@if(isset($products))
 		<ul>
 		@foreach($products as $product)
@@ -38,4 +38,37 @@
 		@endforeach
 		</ul>
 	@endif
+@endsection --> --}}
+
+@section('products')
+
+    @foreach($products->chunk(3) as $productChunk)
+
+      <div class="row">
+        @foreach($productChunk as $product)
+
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="{{ $product->img }}" alt="...">
+            <div class="caption">
+              <h2>{{ $product->title }}</h2>
+              <h3>{{ $product->brand }}</h3>
+
+              <p class="description">{{ $product->description }}</p>
+              <div class="clearfix">
+              <p class="pull-left price">${{ $product->price }}</p>
+              <p> <a href="{{ route('product.agregarCarrito', ['id' => $product->id]) }}" class="btn btn-success pull-right price" role="button">Comprar</a></p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    @endforeach
+
+@endforeach
+
+
+
+
 @endsection

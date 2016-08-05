@@ -15,7 +15,7 @@ Route::get('/', function(){
 	Route::post('/editarUsuario', 'UserController@updateUser');
 
 	Route::get('/buscarPersonas', 'UserController@showSearchPeople');
-	
+
 	Route::post('/buscarPersonas', 'UserController@showPeople');
 
 	Route::get('/vender', 'ProductController@showSell');
@@ -23,8 +23,21 @@ Route::get('/', function(){
 	Route::get('/cargarProducto', 'ProductController@createProduct');
 
 	Route::post('/cargarProducto', 'ProductController@storeProduct');
-	
+
 	Route::post('/buscarProductos', 'ProductController@searchProducts');
 
-	Route::get('/comprar', 'ProductController@showBuy');
+	Route::get('/comprar', [
+		'uses' => 'ProductController@showBuy',
+		'as' => 'product.showBuy'
+	]);
+
+	Route::get('/agregarCarrito/{id}',[
+		'uses' => 'ProductController@agregarCarrito',
+		'as' => 'product.agregarCarrito'
+	]);
+
+	Route::get('/carro',[
+		'uses' => 'ProductController@carro',
+		'as' => 'product.agregarCarro'
+	]);
 //});

@@ -57,6 +57,12 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{{ route('product.agregarCarro') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    Carrito
+                    <span class="badge">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+                  </a>
+                  </li>
+
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -79,7 +85,7 @@
     </nav>
 
     @yield('content')
-    
+
     @yield('people')
 
     @yield('products')
