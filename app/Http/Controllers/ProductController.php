@@ -8,7 +8,11 @@ use App\Http\Requests;
 
 use App\Product;
 
+use App\Cart;
+
 use Validator;
+
+use Session;
 
 
 class ProductController extends Controller
@@ -55,7 +59,8 @@ class ProductController extends Controller
 
     public function showBuy()
     {
-        return view('buy');
+      $products = Product::all();
+        return view('buy', ['products' => $products]);
     }
 
     public function showProducts()
@@ -65,10 +70,33 @@ class ProductController extends Controller
 
     public function searchProducts(Request $request)
     {
-       $parameter = $request->search; 
+       $parameter = $request->search;
        $products = (Product::where('title', 'LIKE', "%$parameter%")->get());
        return view('buy', ['products' => $products]);
     }
 
+    public function carro() {
+      {
+        if (!Session::has('cart')) {
+            return view('shoppingCart');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('shoppingCart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+    }
+      }
+
+    public function agregarCarrito(Request $request, $id) {
+
+      $product = Product::find($id);
+      $carritoViejo = Session::has('cart') ? Session::get('cart' ) : null;
+      $cart = new Cart($carritoViejo);
+      $cart->add($product, $product->id);
+
+      $request->session()->put('cart', $cart);
+      // dd($request->session()->get('cart'));
+      return redirect()->route('product.showBuy');
+
+    }
 
 }

@@ -26,7 +26,24 @@ Route::get('/', function(){
 
 	Route::post('/buscarProductos', 'ProductController@searchProducts');
 
+<<<<<<< HEAD
 	Route::get('/vistaProducto', 'ProductController@productDetail');
 
 	Route::get('/comprar', 'ProductController@showBuy');
+=======
+	Route::get('/comprar', [
+		'uses' => 'ProductController@showBuy',
+		'as' => 'product.showBuy'
+	]);
+
+	Route::get('/agregarCarrito/{id}',[
+		'uses' => 'ProductController@agregarCarrito',
+		'as' => 'product.agregarCarrito'
+	]);
+
+	Route::get('/carro',[
+		'uses' => 'ProductController@carro',
+		'as' => 'product.agregarCarro'
+	]);
+>>>>>>> carrito
 //});
