@@ -16,13 +16,13 @@ use Validator;
 
 class UserController extends Controller
 {
-    
+
      public function __construct()
     {
         $this->middleware('auth');
     }
 
-   
+
     public function editUser()
     {
     	return view('updateUser');
@@ -56,4 +56,14 @@ class UserController extends Controller
         $people = (User::where('name', 'LIKE', "%$parameter%")->get());
         return view('searchPeople', ['people' => $people]);
     }
-}
+
+    public function profile() {
+         $orders = Auth::user()->orders;
+         $orders->transform(function($order, $key) {
+             $order->cart = unserialize($order->cart);
+             return $order;
+         });
+         return view('profile', ['orders' => $orders]);
+     }
+
+    }
